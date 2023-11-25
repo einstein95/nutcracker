@@ -1921,6 +1921,13 @@ def o72_findObject(op, stack, game):
     stack.append(f'find-object {xpos},{ypos}')
 
 
+@regop  
+def o72_findObjectWithClassOf(op, stack, game):
+    ypos = stack.pop()
+    xpos = stack.pop()
+    stack.append(f'find-object {xpos},{ypos}')
+
+
 @regop
 def o6_findInventory(op, stack, game):
     slot = stack.pop()
